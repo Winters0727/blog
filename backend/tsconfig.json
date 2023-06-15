@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "removeComments": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "module": "es6",
+    "target": "es6",
+    "lib": ["es6"]
+  },
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "esm": true
+  }
+}
