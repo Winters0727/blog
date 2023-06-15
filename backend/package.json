@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec  ts-node index.ts",
+    "dev": "NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec  ts-node app.ts",
     "prod": "NODE_ENV=production ts-node index.ts"
   },
   "author": "",
