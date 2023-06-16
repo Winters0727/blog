@@ -10,7 +10,7 @@ const articleSchema = {
       description: "article 내용",
     },
     comments: {
-      bsonType: ["objectId"],
+      bsonType: "array",
       description: "article 댓글",
     },
     likes: {
@@ -18,7 +18,7 @@ const articleSchema = {
       description: "article 추천 수",
     },
     tags: {
-      bsonType: ["string"],
+      bsonType: "array",
       description: "article 태그 (문자열 배열)",
     },
     created_at: {
