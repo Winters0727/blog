@@ -11,17 +11,20 @@ const postArticle = async (req: Request, res: Response) => {
     const article = await articleCollection.insertOne({
       ...req.body,
       likes: 0,
+      views: 0,
       comments: [],
       created_at: new Date(),
       updated_at: new Date(),
       is_deleted: false,
     });
 
-    return res.status(201).json(article);
+    return res.status(201).json({
+      result: "success",
+      article,
+    });
   } catch (err: any) {
     return res.status(500).json({
       error: "Internal Server Error",
-      detail: err,
     });
   }
 };
@@ -52,6 +55,7 @@ const getRecentArticles = async (req: Request, res: Response) => {
     }
 
     return res.status(200).json({
+      result: "success",
       totalArticlesCount,
       currentPage: parseInt(req.query?.current_page as string) || 1,
       recentArticles,

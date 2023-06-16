@@ -17,6 +17,10 @@ const articleSchema = {
       bsonType: "int",
       description: "article 추천 수",
     },
+    views: {
+      bsonType: "int",
+      description: "article 조회 수",
+    },
     tags: {
       bsonType: "array",
       description: "article 태그 (문자열 배열)",
