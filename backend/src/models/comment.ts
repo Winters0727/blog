@@ -1,6 +1,14 @@
 const commentSchema = {
   bsonType: "object",
   properties: {
+    article_id: {
+      bsonType: "objectId",
+      description: "comment 게시글 아이디",
+    },
+    address: {
+      bsonType: "string",
+      description: "comment 작성 IP 주소",
+    },
     name: {
       bsonType: "string",
       description: "comment 작성자 이름",
