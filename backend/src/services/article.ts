@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { ObjectId } from "mongodb";
+import { Document, ObjectId } from "mongodb";
 import { getCollection } from "../../database.ts";
 
 const PAGINATION_COUNT = 5;
@@ -32,7 +32,7 @@ const postArticle = async (req: Request, res: Response) => {
 const getRecentArticles = async (req: Request, res: Response) => {
   try {
     const totalArticlesCount = await articleCollection.countDocuments();
-    const recentArticles = [];
+    const recentArticles: Document[] = [];
 
     const articles = articleCollection.aggregate([
       { $match: { is_deleted: false } },
@@ -74,7 +74,7 @@ const getArticle = async (req: Request, res: Response) => {
 
     const article = await articleCollection.findOne({ _id: new ObjectId(id) });
 
-    if (article) {
+    if (article && !article.is_deleted) {
       return res.status(200).json({
         result: "success",
         article,
@@ -115,12 +115,21 @@ const deleteArticle = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
-    await articleCollection.findOneAndUpdate(
-      { _id: new ObjectId(id) },
-      { $set: { is_deleted: true, updated_at: new Date() } }
-    );
+    const article = await articleCollection.findOne({ _id: new ObjectId(id) });
 
-    return res.status(200).json({ result: "success" });
+    if (article && !article.is_deleted) {
+      await articleCollection.findOneAndUpdate(
+        { _id: new ObjectId(id) },
+        { $set: { is_deleted: true, updated_at: new Date() } }
+      );
+
+      return res.status(200).json({ result: "success" });
+    }
+
+    return res.status(404).json({
+      result: "fail",
+      error: "Article not found",
+    });
   } catch (err: any) {
     return res.status(500).json({
       result: "fail",
