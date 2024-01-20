@@ -4,6 +4,7 @@ import {
   getRecentArticles,
   getArticle,
   updateArticle,
+  updateArticleLikes,
   deleteArticle,
 } from "../services/article.ts";
 
@@ -15,6 +16,7 @@ router.get("/recent", getRecentArticles);
 router.get("/:id", getArticle);
 
 router.put("/:id", updateArticle);
+router.get("/likes/:id", updateArticleLikes);
 
 router.delete("/:id", deleteArticle);
 

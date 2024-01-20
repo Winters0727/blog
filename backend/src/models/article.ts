@@ -14,8 +14,8 @@ const articleSchema = {
       description: "article 댓글",
     },
     likes: {
-      bsonType: "int",
-      description: "article 추천 수",
+      bsonType: "array",
+      description: "article 추천 IP 리스트 (문자열 배열)",
     },
     views: {
       bsonType: "int",
