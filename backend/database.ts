@@ -2,7 +2,7 @@ import { Document, MongoClient, ServerApiVersion } from "mongodb";
 import ArticleSchema from "./src/models/article.ts";
 import CommentSchema from "./src/models/comment.ts";
 
-const DATABASE_URL = `${process.env.DATABASE_PREFIX}${process.env.DATABASE_ACCOUNT}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_SUFFIX}`;
+const DATABASE_URL = `${process.env.DATABASE_PREFIX}${process.env.DATABASE_ACCOUNT}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_SUFFIX}/${process.env.DATABASE_OPTIONS}`;
 
 const client = new MongoClient(DATABASE_URL, {
   serverApi: {
