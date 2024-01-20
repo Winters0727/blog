@@ -15,7 +15,11 @@ app.use(bodyParser.json());
 app.use("/article", ArticleRouter);
 app.use("/comment", CommentRouter);
 
-app.listen(process.env.PORT, () => {
-  initializeDatabase();
-  console.log("App is running...");
-});
+app.listen(
+  process.env.PORT ? parseInt(process.env.PORT) : 3000,
+  "0.0.0.0",
+  () => {
+    initializeDatabase();
+    console.log("App is running...");
+  }
+);
