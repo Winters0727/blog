@@ -21,3 +21,8 @@ export interface ModelSchema {
     };
   };
 }
+
+export interface Account {
+  id: string;
+  password: string;
+}

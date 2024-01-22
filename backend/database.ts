@@ -1,8 +1,12 @@
-import { Document, MongoClient, ServerApiVersion } from "mongodb";
+import { Collection, Document, MongoClient, ServerApiVersion } from "mongodb";
 
 import AdminSchema from "./src/models/admin.ts";
 import ArticleSchema from "./src/models/article.ts";
 import CommentSchema from "./src/models/comment.ts";
+
+import { hashPassword } from "./src//utils/password.ts";
+
+import type { Account } from "./src/types/model.type.ts";
 
 const DATABASE_URL = `${process.env.DATABASE_PREFIX}${process.env.DATABASE_ACCOUNT}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_SUFFIX}/${process.env.DATABASE_OPTIONS}`;
 
@@ -46,6 +50,23 @@ const initializeCollection = async (name: string, schema: Document) => {
     await createCollection(name, schema);
 };
 
+const initializeAdminAccount = async (
+  account: Account,
+  adminCollection: Collection
+) => {
+  const { id, password } = account;
+
+  const adminAccount = await adminCollection.findOne({ id });
+
+  if (!adminAccount) {
+    const hashedPassword = hashPassword(password);
+    await adminCollection.insertOne({
+      id,
+      password: hashedPassword,
+    });
+  }
+};
+
 const initializeDatabase = async () => {
   try {
     console.log("Attempt to connect database...");
@@ -58,6 +79,20 @@ const initializeDatabase = async () => {
 
     for (const { name, schema } of collections) {
       await initializeCollection(name, schema);
+    }
+
+    const adminId = process.env.ADMIN_ID;
+    const adminPassword = process.env.ADMIN_PASSWORD;
+
+    if (adminId && adminPassword) {
+      const adminCollection = getCollection("admin");
+      await initializeAdminAccount(
+        {
+          id: adminId,
+          password: adminPassword,
+        },
+        adminCollection
+      );
     }
 
     console.log("Initialization is completed!");
