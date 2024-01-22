@@ -1,4 +1,6 @@
-const commentSchema = {
+import type { ModelSchema } from "../types/model.type";
+
+const commentSchema: ModelSchema = {
   bsonType: "object",
   properties: {
     article_id: {
@@ -24,6 +26,10 @@ const commentSchema = {
     likes: {
       bsonType: "int",
       description: "comment 추천 수",
+    },
+    sub_comments: {
+      bsonType: "array",
+      description: "comment 대댓글",
     },
     created_at: {
       bsonType: "date",

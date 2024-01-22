@@ -1,4 +1,6 @@
-const articleSchema = {
+import type { ModelSchema } from "../types/model.type";
+
+const articleSchema: ModelSchema = {
   bsonType: "object",
   properties: {
     title: {
@@ -9,9 +11,9 @@ const articleSchema = {
       bsonType: "string",
       description: "article 내용",
     },
-    comments: {
-      bsonType: "array",
-      description: "article 댓글",
+    category: {
+      bsonType: "string",
+      description: "article 카테고리",
     },
     likes: {
       bsonType: "array",
