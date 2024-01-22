@@ -1,4 +1,6 @@
 import { Document, MongoClient, ServerApiVersion } from "mongodb";
+
+import AdminSchema from "./src/models/admin.ts";
 import ArticleSchema from "./src/models/article.ts";
 import CommentSchema from "./src/models/comment.ts";
 
@@ -12,9 +14,13 @@ const client = new MongoClient(DATABASE_URL, {
   },
 });
 
-const blogDatabase = client.db("blog");
+const database = client.db("blog");
 
 const collections = [
+  {
+    name: "admin",
+    schema: AdminSchema,
+  },
   {
     name: "article",
     schema: ArticleSchema,
@@ -25,17 +31,17 @@ const collections = [
   },
 ];
 
-const getCollection = (name: string) => blogDatabase.collection(name);
+const getCollection = (name: string) => database.collection(name);
 
 const createCollection = async (name: string, schema: Document) =>
-  await blogDatabase.createCollection(name, {
+  await database.createCollection(name, {
     validator: {
       $jsonSchema: schema,
     },
   });
 
 const initializeCollection = async (name: string, schema: Document) => {
-  const dbcollections = await blogDatabase.collections();
+  const dbcollections = await database.collections();
   if (!dbcollections.some((document) => document.collectionName === name))
     await createCollection(name, schema);
 };
