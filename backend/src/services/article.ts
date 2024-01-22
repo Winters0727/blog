@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { Document, ObjectId } from "mongodb";
+
 import { getCollection } from "../../database.ts";
 
 const PAGINATION_COUNT = 5;
@@ -12,7 +13,6 @@ const postArticle = async (req: Request, res: Response) => {
       ...req.body,
       likes: [],
       views: 0,
-      comments: [],
       created_at: new Date(),
       updated_at: new Date(),
       is_deleted: false,
@@ -35,7 +35,7 @@ const getArticle = async (req: Request, res: Response) => {
 
     const prevArticle = await articleCollection.findOne(
       { _id: new ObjectId(id) },
-      { projection: { is_deleted: true } }
+      { projection: { is_deleted: 1 } }
     );
 
     if (prevArticle && !prevArticle.is_deleted) {
@@ -89,6 +89,7 @@ const getRecentArticles = async (req: Request, res: Response) => {
           _id: 1,
           title: 1,
           context: 1,
+          likes: 1,
         },
       },
     ]);
@@ -100,6 +101,7 @@ const getRecentArticles = async (req: Request, res: Response) => {
           article.context.length > 20
             ? article.context.slice(0, 20).padEnd(23, ".")
             : article.context,
+        likes: article.likes.length,
       });
     }
 
@@ -167,10 +169,11 @@ const updateArticleLikes = async (req: Request, res: Response) => {
         _id: new ObjectId(id),
       });
 
-      return res.status(200).json({
-        article,
-        result: "success",
-      });
+      if (article)
+        return res.status(200).json({
+          article: { ...article, likes: article.likes.length },
+          result: "success",
+        });
     }
 
     return res.status(500).json({
