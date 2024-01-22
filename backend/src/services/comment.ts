@@ -1,6 +1,9 @@
 import type { Request, Response } from "express";
 import { Document, ObjectId } from "mongodb";
+
 import { getCollection } from "../../database.ts";
+
+import { comparePassword, hashPassword } from "../utils/password.ts";
 
 const commentCollection = getCollection("comment");
 
@@ -8,6 +11,7 @@ const postComment = async (req: Request, res: Response) => {
   try {
     const comment = await commentCollection.insertOne({
       ...req.body,
+      password: hashPassword(req.body.password),
       address: req.ip || req.socket.remoteAddress,
       likes: 0,
       created_at: new Date(),
@@ -81,7 +85,7 @@ const deleteComment = async (req: Request, res: Response) => {
     const comment = await commentCollection.findOne({ _id: new ObjectId(id) });
 
     if (comment && !comment.is_deleted) {
-      if (password === comment.password) {
+      if (comparePassword(password, comment.password)) {
         await commentCollection.findOneAndUpdate(
           { _id: new ObjectId(id) },
           { $set: { is_deleted: true, updated_at: new Date() } }
