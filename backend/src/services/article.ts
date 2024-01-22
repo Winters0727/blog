@@ -70,6 +70,22 @@ const getArticle = async (req: Request, res: Response) => {
   }
 };
 
+const getCategories = async (req: Request, res: Response) => {
+  try {
+    const category = await articleCollection.distinct("category");
+
+    return res.status(200).json({
+      result: "success",
+      category,
+    });
+  } catch (err: any) {
+    return res.status(500).json({
+      result: "fail",
+      error: "Internal Server Error",
+    });
+  }
+};
+
 const getRecentArticles = async (req: Request, res: Response) => {
   try {
     const totalArticlesCount = await articleCollection.countDocuments();
@@ -217,6 +233,7 @@ const deleteArticle = async (req: Request, res: Response) => {
 
 export {
   postArticle,
+  getCategories,
   getRecentArticles,
   getArticle,
   updateArticle,
