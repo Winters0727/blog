@@ -13,7 +13,6 @@ const DATABASE_URL = `${process.env.DATABASE_PREFIX}${process.env.DATABASE_ACCOU
 const client = new MongoClient(DATABASE_URL, {
   serverApi: {
     version: ServerApiVersion.v1,
-    strict: true,
     deprecationErrors: true,
   },
 });
