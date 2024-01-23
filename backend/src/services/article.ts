@@ -81,7 +81,21 @@ const getArticle = async (req: Request, res: Response) => {
 
 const getCategories = async (req: Request, res: Response) => {
   try {
-    const category = await articleCollection.distinct("category");
+    const category: { [key: string]: number } = {};
+
+    const categoryCounts = articleCollection.aggregate<{
+      _id: string;
+      count: number;
+    }>([
+      {
+        $group: { _id: "$category", count: { $sum: 1 } },
+      },
+    ]);
+
+    for await (const categoryCount of categoryCounts) {
+      const { _id, count } = categoryCount;
+      category[_id] = count;
+    }
 
     return res.status(200).json({
       result: "success",
