@@ -43,6 +43,10 @@ const login = async (req: Request, res: Response) => {
           lastLoggedInAt: lastLoggedInAt || currentTime,
         };
 
+        res.cookie("admin", "true", {
+          maxAge: 60 * 60 * 1000,
+        });
+
         return res.status(200).json({
           result: "success",
         });
@@ -74,6 +78,8 @@ const logout = async (req: Request, res: Response) => {
       const currentTime = Date.now();
       lastLoggedInAt = currentTime;
       session.admin = null;
+
+      res.clearCookie("admin");
 
       return res.status(200).json({
         result: "success",
