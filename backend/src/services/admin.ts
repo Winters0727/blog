@@ -1,4 +1,4 @@
-import type { Request, Response } from "express";
+import type { Request, Response, NextFunction } from "express";
 
 import { getCollection } from "../../database.ts";
 
@@ -20,62 +20,82 @@ interface AdminSession extends Session {
 let lastLoggedInAt: number | null = null;
 
 const login = async (req: Request, res: Response) => {
-  const { id, password } = req.body as Account;
+  try {
+    const { id, password } = req.body as Account;
 
-  const adminAccount = await adminCollection.findOne({ id });
+    const adminAccount = await adminCollection.findOne({ id });
 
-  if (!adminAccount) {
+    if (!adminAccount) {
+      return res.status(401).json({
+        result: "fail",
+        error: "Invalid account",
+      });
+    }
+
+    if (comparePassword(password, adminAccount.password)) {
+      const session = req.session as AdminSession;
+
+      if (!session.admin || !session.admin.isLoggedIn) {
+        const currentTime = Date.now();
+        session.admin = {
+          isLoggedIn: true,
+          loggedInAt: currentTime,
+          lastLoggedInAt: lastLoggedInAt || currentTime,
+        };
+
+        return res.status(200).json({
+          result: "success",
+        });
+      }
+
+      return res.status(401).json({
+        result: "fail",
+        error: "Already logged in",
+      });
+    }
+
     return res.status(401).json({
       result: "fail",
-      error: "Invalid account",
+      error: "Password not matched",
+    });
+  } catch (err: any) {
+    return res.status(500).json({
+      result: "fail",
+      error: "Internal Server Error",
     });
   }
+};
 
-  if (comparePassword(password, adminAccount.password)) {
+const logout = async (req: Request, res: Response) => {
+  try {
     const session = req.session as AdminSession;
 
-    if (!session.admin || !session.admin.isLoggedIn) {
+    if (session.admin) {
       const currentTime = Date.now();
-      session.admin = {
-        isLoggedIn: true,
-        loggedInAt: currentTime,
-        lastLoggedInAt: lastLoggedInAt || currentTime,
-      };
+      lastLoggedInAt = currentTime;
+      session.admin = null;
 
       return res.status(200).json({
         result: "success",
       });
     }
 
-    return res.status(401).json({
+    return res.status(400).json({
       result: "fail",
-      error: "Already logged in",
+      error: "Bad request",
+    });
+  } catch (err: any) {
+    return res.status(500).json({
+      result: "fail",
+      error: "Internal Server Error",
     });
   }
-
-  return res.status(401).json({
-    result: "fail",
-    error: "Password not matched",
-  });
 };
 
-const logout = async (req: Request, res: Response) => {
+const isAuthorized = (req: Request) => {
   const session = req.session as AdminSession;
 
-  if (session.admin) {
-    const currentTime = Date.now();
-    lastLoggedInAt = currentTime;
-    session.admin = null;
-
-    return res.status(200).json({
-      result: "success",
-    });
-  }
-
-  return res.status(400).json({
-    result: "fail",
-    error: "Bad request",
-  });
+  return session.admin && session.admin.isLoggedIn;
 };
 
-export { login, logout };
+export { login, logout, isAuthorized };

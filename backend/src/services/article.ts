@@ -3,24 +3,33 @@ import { Document, ObjectId } from "mongodb";
 
 import { getCollection } from "../../database.ts";
 
+import { isAuthorized } from "./admin.ts";
+
 const PAGINATION_COUNT = 5;
 
 const articleCollection = getCollection("article");
 
 const postArticle = async (req: Request, res: Response) => {
   try {
-    const article = await articleCollection.insertOne({
-      ...req.body,
-      likes: [],
-      views: 0,
-      created_at: new Date(),
-      updated_at: new Date(),
-      is_deleted: false,
-    });
+    if (isAuthorized(req)) {
+      const article = await articleCollection.insertOne({
+        ...req.body,
+        likes: [],
+        views: 0,
+        created_at: new Date(),
+        updated_at: new Date(),
+        is_deleted: false,
+      });
 
-    return res.status(201).json({
-      result: "success",
-      article,
+      return res.status(201).json({
+        result: "success",
+        article,
+      });
+    }
+
+    return res.status(401).json({
+      result: "fail",
+      error: "Unathorized",
     });
   } catch (err: any) {
     return res.status(500).json({
@@ -137,14 +146,21 @@ const getRecentArticles = async (req: Request, res: Response) => {
 
 const updateArticle = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
+    if (isAuthorized(req)) {
+      const { id } = req.params;
 
-    await articleCollection.findOneAndUpdate(
-      { _id: new ObjectId(id) },
-      { $set: { ...req.body, updated_at: new Date() } }
-    );
+      await articleCollection.findOneAndUpdate(
+        { _id: new ObjectId(id) },
+        { $set: { ...req.body, updated_at: new Date() } }
+      );
 
-    return res.status(200).json({ result: "success" });
+      return res.status(200).json({ result: "success" });
+    }
+
+    return res.status(401).json({
+      result: "fail",
+      error: "Unathorized",
+    });
   } catch (err: any) {
     return res.status(500).json({
       result: "fail",
@@ -206,22 +222,30 @@ const updateArticleLikes = async (req: Request, res: Response) => {
 
 const deleteArticle = async (req: Request, res: Response) => {
   try {
-    const { id } = req.params;
+    if (isAuthorized(req)) {
+      const { id } = req.params;
 
-    const article = await articleCollection.findOne({ _id: new ObjectId(id) });
+      const article = await articleCollection.findOne({
+        _id: new ObjectId(id),
+      });
 
-    if (article && !article.is_deleted) {
-      await articleCollection.findOneAndUpdate(
-        { _id: new ObjectId(id) },
-        { $set: { is_deleted: true, updated_at: new Date() } }
-      );
+      if (article && !article.is_deleted) {
+        await articleCollection.findOneAndUpdate(
+          { _id: new ObjectId(id) },
+          { $set: { is_deleted: true, updated_at: new Date() } }
+        );
 
-      return res.status(200).json({ result: "success" });
+        return res.status(200).json({ result: "success" });
+      }
+
+      return res.status(404).json({
+        result: "fail",
+        error: "Article not found",
+      });
     }
-
-    return res.status(404).json({
+    return res.status(401).json({
       result: "fail",
-      error: "Article not found",
+      error: "Unathorized",
     });
   } catch (err: any) {
     return res.status(500).json({
