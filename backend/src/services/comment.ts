@@ -5,10 +5,9 @@ import { getCollection } from "../../database.ts";
 
 import { comparePassword, hashPassword } from "../utils/password.ts";
 
-const commentCollection = getCollection("comment");
-
 const postComment = async (req: Request, res: Response) => {
   try {
+    const commentCollection = getCollection("blog", "comment");
     const comment = await commentCollection.insertOne({
       ...req.body,
       password: hashPassword(req.body.password),
@@ -29,6 +28,7 @@ const postComment = async (req: Request, res: Response) => {
 
 const getComments = async (req: Request, res: Response) => {
   try {
+    const commentCollection = getCollection("blog", "comment");
     const articleComments: Document[] = [];
 
     const comments = commentCollection.aggregate([
@@ -79,6 +79,7 @@ const getComments = async (req: Request, res: Response) => {
 
 const deleteComment = async (req: Request, res: Response) => {
   try {
+    const commentCollection = getCollection("blog", "comment");
     const { id } = req.params;
     const { password } = req.body;
 

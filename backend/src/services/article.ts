@@ -7,10 +7,10 @@ import { isAuthorized } from "./admin.ts";
 
 const PAGINATION_COUNT = 5;
 
-const articleCollection = getCollection("article");
-
 const postArticle = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
+
     if (isAuthorized(req)) {
       const article = await articleCollection.insertOne({
         ...req.body,
@@ -40,6 +40,7 @@ const postArticle = async (req: Request, res: Response) => {
 
 const getArticle = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
     const { id } = req.params;
 
     const prevArticle = await articleCollection.findOne(
@@ -81,6 +82,7 @@ const getArticle = async (req: Request, res: Response) => {
 
 const getCategories = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
     const category: { [key: string]: number } = {};
 
     const categoryCounts = articleCollection.aggregate<{
@@ -111,6 +113,7 @@ const getCategories = async (req: Request, res: Response) => {
 
 const getRecentArticles = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
     const totalArticlesCount = await articleCollection.countDocuments();
     const recentArticles: Document[] = [];
 
@@ -160,6 +163,8 @@ const getRecentArticles = async (req: Request, res: Response) => {
 
 const updateArticle = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
+
     if (isAuthorized(req)) {
       const { id } = req.params;
 
@@ -185,6 +190,7 @@ const updateArticle = async (req: Request, res: Response) => {
 
 const updateArticleLikes = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
     const { id } = req.params;
 
     const prevArticle = await articleCollection.findOne(
@@ -236,6 +242,8 @@ const updateArticleLikes = async (req: Request, res: Response) => {
 
 const deleteArticle = async (req: Request, res: Response) => {
   try {
+    const articleCollection = getCollection("blog", "article");
+
     if (isAuthorized(req)) {
       const { id } = req.params;
 

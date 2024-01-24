@@ -1,4 +1,4 @@
-import type { Request, Response, NextFunction } from "express";
+import type { Request, Response } from "express";
 
 import { getCollection } from "../../database.ts";
 
@@ -6,8 +6,6 @@ import { comparePassword } from "../utils/password.ts";
 
 import type { Session } from "express-session";
 import type { Account } from "../types/model.type.ts";
-
-const adminCollection = getCollection("admin");
 
 interface AdminSession extends Session {
   admin: {
@@ -21,6 +19,7 @@ let lastLoggedInAt: number | null = null;
 
 const login = async (req: Request, res: Response) => {
   try {
+    const adminCollection = getCollection("blog", "admin");
     const { id, password } = req.body as Account;
 
     const adminAccount = await adminCollection.findOne({ id });
