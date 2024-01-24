@@ -1,12 +1,28 @@
 import { Collection, Document, MongoClient, ServerApiVersion } from "mongodb";
 
-import AdminSchema from "./src/models/admin.ts";
-import ArticleSchema from "./src/models/article.ts";
-import CommentSchema from "./src/models/comment.ts";
+import BlogDatabase from "./src/database/blog.ts";
+import FuruyoniDatabase from "./src/database/furuyoni.ts";
 
 import { hashPassword } from "./src//utils/password.ts";
 
-import type { Account } from "./src/types/model.type.ts";
+import { migrateData } from "./src/migration/furuyoni/character.migration.ts";
+
+import type { Db } from "mongodb";
+import type { Account, ModelSchema } from "./src/types/model.type.ts";
+
+interface CustomCollection {
+  name: string;
+  schema: ModelSchema;
+}
+
+interface CustomDatabase {
+  name: string;
+  collections: CustomCollection[];
+}
+
+interface Database {
+  [dbName: string]: Db;
+}
 
 const DATABASE_URL = `${process.env.DATABASE_PREFIX}${process.env.DATABASE_ACCOUNT}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_SUFFIX}/${process.env.DATABASE_OPTIONS}`;
 
@@ -17,36 +33,41 @@ const client = new MongoClient(DATABASE_URL, {
   },
 });
 
-const database = client.db("blog");
+const database: Database = {};
 
-const collections = [
-  {
-    name: "admin",
-    schema: AdminSchema,
-  },
-  {
-    name: "article",
-    schema: ArticleSchema,
-  },
-  {
-    name: "comment",
-    schema: CommentSchema,
-  },
-];
+const databaseList: CustomDatabase[] = [BlogDatabase, FuruyoniDatabase];
 
-const getCollection = (name: string) => database.collection(name);
+const getCollection = (dbName: string, name: string) =>
+  database[dbName].collection(name);
 
-const createCollection = async (name: string, schema: Document) =>
+const createCollection = async (database: Db, name: string, schema: Document) =>
   await database.createCollection(name, {
     validator: {
       $jsonSchema: schema,
     },
   });
 
-const initializeCollection = async (name: string, schema: Document) => {
+const initializeCollection = async (
+  database: Db,
+  name: string,
+  schema: Document
+) => {
   const dbcollections = await database.collections();
   if (!dbcollections.some((document) => document.collectionName === name))
-    await createCollection(name, schema);
+    await createCollection(database, name, schema);
+};
+
+const initializeDatabase = async (
+  name: string,
+  collections: CustomCollection[]
+) => {
+  const db = client.db(name);
+
+  database[name] = db;
+
+  for (const { name, schema } of collections) {
+    await initializeCollection(db, name, schema);
+  }
 };
 
 const initializeAdminAccount = async (
@@ -66,7 +87,7 @@ const initializeAdminAccount = async (
   }
 };
 
-const initializeDatabase = async () => {
+const initializeConnection = async () => {
   try {
     console.log("Attempt to connect database...");
 
@@ -76,15 +97,15 @@ const initializeDatabase = async () => {
 
     console.log("Initializing collections...!");
 
-    for (const { name, schema } of collections) {
-      await initializeCollection(name, schema);
+    for (const { name, collections } of databaseList) {
+      await initializeDatabase(name, collections);
     }
 
     const adminId = process.env.ADMIN_ID;
     const adminPassword = process.env.ADMIN_PASSWORD;
 
     if (adminId && adminPassword) {
-      const adminCollection = getCollection("admin");
+      const adminCollection = getCollection("blog", "admin");
       await initializeAdminAccount(
         {
           id: adminId,
@@ -94,6 +115,8 @@ const initializeDatabase = async () => {
       );
     }
 
+    migrateData();
+
     console.log("Initialization is completed!");
   } catch (err: any) {
     await client.close();
@@ -101,4 +124,4 @@ const initializeDatabase = async () => {
   }
 };
 
-export { client, initializeDatabase, getCollection };
+export { client, initializeConnection, getCollection };
