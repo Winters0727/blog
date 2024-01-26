@@ -5,7 +5,7 @@ import FuruyoniDatabase from "./src/database/furuyoni.ts";
 
 import { hashPassword } from "./src//utils/password.ts";
 
-import { migrateData } from "./src/migration/furuyoni/character.migration.ts";
+import { initializeMigration } from "./src/migration/furuyoni/index.migration.ts";
 
 import type { Db } from "mongodb";
 import type { Account, ModelSchema } from "./src/types/model.type.ts";
@@ -115,7 +115,7 @@ const initializeConnection = async () => {
       );
     }
 
-    migrateData();
+    await initializeMigration();
 
     console.log("Initialization is completed!");
   } catch (err: any) {
