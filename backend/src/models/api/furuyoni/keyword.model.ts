@@ -19,6 +19,14 @@ const keywordSchema: ModelSchema = {
       bsonType: "array",
       description: "키워드와 관련된 단어들 (검색용)",
     },
+    created_at: {
+      bsonType: "date",
+      description: "데이터 생성 날짜",
+    },
+    updated_at: {
+      bsonType: "date",
+      description: "데이터 수정 날짜",
+    },
   },
 };
 

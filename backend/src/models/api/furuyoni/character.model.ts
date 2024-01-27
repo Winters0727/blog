@@ -55,6 +55,14 @@ const characterSchema: ModelSchema = {
       bsonType: "object",
       description: "캐릭터 상징 보조 키워드",
     },
+    created_at: {
+      bsonType: "date",
+      description: "데이터 생성 날짜",
+    },
+    updated_at: {
+      bsonType: "date",
+      description: "데이터 수정 날짜",
+    },
   },
 };
 
