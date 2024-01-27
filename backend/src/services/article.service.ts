@@ -3,7 +3,7 @@ import { Document, ObjectId } from "mongodb";
 
 import { getCollection } from "../../database.ts";
 
-import { isAuthorized } from "./admin.ts";
+import { isAuthorized } from "./admin.service.ts";
 
 const PAGINATION_COUNT = 5;
 
