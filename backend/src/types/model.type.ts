@@ -10,7 +10,8 @@ export type Bson =
   | "bool"
   | "string"
   | "timestamp"
-  | "object";
+  | "object"
+  | "mixed";
 
 export interface ModelSchema {
   bsonType: Bson;
