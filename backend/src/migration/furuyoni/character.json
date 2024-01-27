@@ -1,0 +1,955 @@
+{
+  "data": [
+    {
+      "code": "NA-23",
+      "korName": {
+        "O": "아키나"
+      },
+      "engName": {
+        "O": "akina"
+      },
+      "jpnName": {
+        "O": "アキナ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": []
+      },
+      "abilityKeyword": "시세",
+      "abilityDescription": "시세 게이지를 가지며, 초기값은 2이다.\r\n상대의 라이프에 0 이상의 데미지를 준다: +1\r\n투자권을 통해 벚꽃결정을 이동시킨다: +1\r\n당신의 라이프에 0 이상의 데미지를 받는다: -1\r\n회수를 통해 벚꽃결정을 이동시킨다: -2",
+      "symbolWeapon": "주판",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-09",
+      "korName": {
+        "O": "치카게",
+        "A1": "치카게 【제4장】"
+      },
+      "engName": {
+        "O": "chikage",
+        "A1": "chikage"
+      },
+      "jpnName": {
+        "O": "チカゲ",
+        "A1": "チカゲ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "A1-N-5", "A1-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "O-S-2", "O-S-3", "A1-S-4"]
+      },
+      "extraCards": {
+        "O": ["O-P-1", "O-P-2", "O-P-3", "O-P-4"],
+        "A1": ["O-P-1", "O-P-2", "O-P-3", "O-P-4"]
+      },
+      "abilityKeyword": "독주머니",
+      "abilityDescription": "독주머니에 카드를 5장(⌜마비독⌟, ⌜환각독⌟, ⌜이완독⌟, ⌜멸등독⌟ 2장) 가진다.",
+      "symbolWeapon": "독",
+      "symbolSub": {
+        "A1": "인연"
+      }
+    },
+    {
+      "code": "NA-08",
+      "korName": {
+        "O": "하가네",
+        "A1": "하가네 【대장장이】"
+      },
+      "engName": {
+        "O": "hagane",
+        "A1": "hagane"
+      },
+      "jpnName": {
+        "O": "ハガネ",
+        "A1": "ハガネ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "A1-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": ["A1-S-1-Ex1"]
+      },
+      "abilityKeyword": "원심",
+      "abilityDescription": "원심을 가진 카드는 아래 두 가지 조건을 모두 만족하는 경우에만 사용할 수 있다.\r\n∙현재 간격이 턴 시작 시의 간겨보다 2 이상 멀어져 있다.\r\n∙이번 턴 동안 당신이 아직 〈공격〉을 수행하지 않았다.",
+      "symbolWeapon": "망치",
+      "symbolSub": {
+        "A1": "모루"
+      }
+    },
+    {
+      "code": "NA-17",
+      "korName": {
+        "O": "하츠미",
+        "A1": "하츠미 【허무신】"
+      },
+      "engName": {
+        "O": "hatsumi",
+        "A1": "hatsumi"
+      },
+      "jpnName": {
+        "O": "ハツミ",
+        "A1": "ハツミ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "O-N-2", "O-N-3", "A1-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "O-S-2", "O-S-3", "A1-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": []
+      },
+      "abilityKeyword": "항해",
+      "abilityDescription": "직전 턴에 상대에게 공격당하지 않았다면 순풍, 공격당했다면 역풍이 된다.",
+      "symbolWeapon": "노",
+      "symbolSub": {
+        "A1": "신뢰"
+      }
+    },
+    {
+      "code": "NA-03",
+      "korName": {
+        "O": "히미카",
+        "A1": "히미카 【원초】"
+      },
+      "engName": {
+        "O": "himika",
+        "A1": "himika"
+      },
+      "jpnName": {
+        "O": "ヒミカ",
+        "A1": "ヒミカ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": []
+      },
+      "abilityKeyword": "연화",
+      "abilityDescription": "당신이 한 턴 동안 카드를 3장 이상 사용했다면, 몇몇 카드가 강화된다.",
+      "symbolWeapon": "총",
+      "symbolSub": {
+        "A1": "불꽃"
+      }
+    },
+    {
+      "code": "NA-03",
+      "korName": {
+        "O": "히미카",
+        "A1": "히미카 【원초】"
+      },
+      "engName": {
+        "O": "himika",
+        "A1": "himika"
+      },
+      "jpnName": {
+        "O": "ヒミカ",
+        "A1": "ヒミカ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": []
+      },
+      "abilityKeyword": "",
+      "abilityDescription": "",
+      "symbolWeapon": ""
+    },
+    {
+      "code": "NA-14",
+      "korName": {
+        "O": "호노카",
+        "A1": "호노카 【오우카】"
+      },
+      "engName": {
+        "O": "honoka",
+        "A1": "honoka"
+      },
+      "jpnName": {
+        "O": "ホノカ",
+        "A1": "ホノカ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [
+          "O-N-1-Ex1",
+          "O-N-1-Ex2",
+          "O-N-1-Ex3",
+          "O-N-4-Ex1",
+          "O-N-5-Ex1",
+          "O-S-1-Ex1",
+          "O-S-1-Ex2"
+        ],
+        "A1": [
+          "A1-N-1-Ex1",
+          "A1-S-1-Ex1",
+          "A1-S-1-Ex2",
+          "A1-S-1-Ex3",
+          "A1-S-1-Ex4",
+          "A1-S-1-Ex5"
+        ]
+      },
+      "abilityKeyword": "개화",
+      "abilityDescription": "몇몇 카드는 사용한 후에 다른 카드로 변환된다.",
+      "symbolWeapon": "깃발",
+      "symbolSub": {
+        "A1": "곡옥"
+      }
+    },
+    {
+      "code": "NA-21",
+      "korName": {
+        "O": "카무이"
+      },
+      "engName": {
+        "O": "kamuwi"
+      },
+      "jpnName": {
+        "O": "カムヰ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": ["O-S-1-Ex1"]
+      },
+      "abilityKeyword": "금기",
+      "abilityDescription": "당신의 금기 게이지가 16 이상이라면, 당신은 패배한다.",
+      "symbolWeapon": "검",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-20",
+      "korName": {
+        "O": "카나에"
+      },
+      "engName": {
+        "O": "kanawe"
+      },
+      "jpnName": {
+        "O": "カナヱ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [
+          "O-P",
+          "O-P-01",
+          "O-P-02",
+          "O-P-03",
+          "O-P-04",
+          "O-P-05",
+          "O-P-06",
+          "O-P-01-W",
+          "O-P-02-W",
+          "O-P-03-W",
+          "O-P-04-W",
+          "O-P-05-W",
+          "O-P-06-W"
+        ]
+      },
+      "abilityKeyword": "신어",
+      "abilityDescription": "이야기 보드의 백색 막에서 영웅담이 시작된다.\r\n구상을 달성할 때마다 다음 막으로 진행하고, 종막에 도달하면 당신은 승리한다.",
+      "symbolWeapon": "가면",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-15",
+      "korName": {
+        "O": "코르누"
+      },
+      "engName": {
+        "O": "korunu"
+      },
+      "jpnName": {
+        "O": "コルヌ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": []
+      },
+      "abilityKeyword": "동결",
+      "abilityDescription": "동결시키면, 동결 토큰을 오라에 놓아서 오라의 비낰ㄴ을 채운다.\r\n동결되어 있는 동안, 기본동작 〈품기〉의 효과는 ⌜동결 토큰을 1개 제거한다.⌟로 변경된다.",
+      "symbolWeapon": "썰매날",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-10",
+      "korName": {
+        "O": "쿠루루",
+        "A1": "쿠루루 【탐색자】",
+        "A2": "쿠루루 【허무신】"
+      },
+      "engName": {
+        "O": "kururu",
+        "A1": "kururu",
+        "A2": "kururu"
+      },
+      "jpnName": {
+        "O": "クルル",
+        "A1": "クルル",
+        "A2": "クルル"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "O-N-2", "A1-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A2": ["A2-N-1", "A2-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "O-S-2", "A1-S-3", "O-S-4"],
+        "A2": ["O-S-1", "O-S-2", "O-S-3", "A2-S-4"]
+      },
+      "extraCards": {
+        "O": ["O-S-3-Ex1"],
+        "A1": ["A1-S-3-Ex1"],
+        "A2": []
+      },
+      "abilityKeyword": "기교",
+      "abilityDescription": "기교가 완성되지 않았다면 톱니바퀴칸의 효과는 해결되지 않는다.\r\n기교를 완성하려면 톱니바퀴에 표시된 만큼 당신의 카드가 앞면으로 놓여 있어야 한다.",
+      "symbolWeapon": "자동장치",
+      "symbolSub": {
+        "A1": "기계",
+        "A2": "우정"
+      }
+    },
+    {
+      "code": "NA-19",
+      "korName": {
+        "O": "메구미"
+      },
+      "engName": {
+        "O": "megumi"
+      },
+      "jpnName": {
+        "O": "メグミ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": []
+      },
+      "abilityKeyword": "다른 벚나무",
+      "abilityDescription": "토양에 씨앗결정을 5개 가진다.",
+      "symbolWeapon": "도리깨",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-25",
+      "korName": {
+        "O": "미소라"
+      },
+      "engName": {
+        "O": "misora"
+      },
+      "jpnName": {
+        "O": "ミソラ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": []
+      },
+      "abilityKeyword": "조준",
+      "abilityDescription": "당신의 종료 페이즈에 현재 간격을 조준으로 기록할 수 있다.\r\n당신의 턴에 〈공격〉을 수행했다면, 메인 페이즈 종료시에 조준을 벗어난다.",
+      "symbolWeapon": "활",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-18",
+      "korName": {
+        "O": "미즈키"
+      },
+      "engName": {
+        "O": "mizuki"
+      },
+      "jpnName": {
+        "O": "ミズキ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": ["O-S-3-Ex1", "O-T-1", "O-T-2", "O-T-3"]
+      },
+      "abilityKeyword": "통솔",
+      "abilityDescription": "병영에 카드를 4장(⌜창병⌟ 2장, ⌜방패병⌟, ⌜기병⌟) 가진다.",
+      "symbolWeapon": "투구",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-05",
+      "korName": {
+        "O": "오보로",
+        "A1": "오보로 【제3장】",
+        "A2": "오보로 【소실】"
+      },
+      "engName": {
+        "O": "oboro",
+        "A1": "oboro",
+        "A2": "oboro"
+      },
+      "jpnName": {
+        "O": "オボロ",
+        "A1": "オボロ",
+        "A2": "オボロ"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "A1-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A2": ["A2-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "O-S-2", "O-S-3", "A1-S-4"],
+        "A2": ["A2-S-1", "O-S-2", "A2-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": ["A1-S-4-Ex1"],
+        "A2": []
+      },
+      "abilityKeyword": "설치",
+      "abilityDescription": "설치를 가진 카드가 덮음패에 있을 때 패산을 재구성하는 경우, 재구성하기 직전에 그중 1장을 덮음패에서 사용해도 된다.",
+      "symbolWeapon": "인술",
+      "symbolSub": {
+        "A1": "전략",
+        "A2": "전자"
+      }
+    },
+    {
+      "code": "NA-12",
+      "korName": {
+        "O": "라이라",
+        "A1": "라이라 【기도사】"
+      },
+      "engName": {
+        "O": "raira",
+        "A1": "raira"
+      },
+      "jpnName": {
+        "O": "ライラ",
+        "A1": "ライラ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "O-N-5", "A1-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "O-S-2", "A1-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": ["O-S-3-Ex1", "O-S-3-Ex2", "O-S-3-Ex3"],
+        "A1": []
+      },
+      "abilityKeyword": "풍뢰",
+      "abilityDescription": "풍신 게이지와 뇌신 게이지를 가지며, 초기값은 0, 최대값은 20이다.\r\n당신이 다른 여신의 카드를 사용할 때마다, 그 카드는 대전되고, 대전을 해제하면 둘 중 하나의 게이지를 1 올린다.\r\n(대전을 해제한 카드는 가로로 돌려서 표시한다.)",
+      "symbolWeapon": "손톱",
+      "symbolSub": {
+        "A1": "폭풍"
+      }
+    },
+    {
+      "code": "NA-22",
+      "korName": {
+        "O": "렌리",
+        "A1": "렌리 【역사가】"
+      },
+      "engName": {
+        "O": "renri",
+        "A1": "renri"
+      },
+      "jpnName": {
+        "O": "レンリ",
+        "A1": "レンリ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [
+          "O-N-1F",
+          "O-N-2F",
+          "O-N-3F",
+          "O-N-5F",
+          "O-N-6F",
+          "O-S-4-Ex1",
+          "O-S-4-Ex1-0",
+          "O-S-4-Ex1-1",
+          "O-S-4-Ex1-2",
+          "O-S-4-Ex1-3"
+        ],
+        "A1": [
+          "O-N-1F",
+          "O-N-3F",
+          "O-N-6F",
+          "A1-N-5-Ex1",
+          "A1-N-5F-Ex1",
+          "A1-N-5-Ex2",
+          "A1-N-5F-Ex2",
+          "A1-N-5-Ex3",
+          "A1-N-5F-Ex3"
+        ]
+      },
+      "abilityKeyword": "위증",
+      "abilityDescription": "통상패를 기본적인 방법으로 사용할 때, 위증을 가진 각 카드로 1번씩 위증할 수 있다. 반증되지 않았다면 위증한 카드로서 사용하고 덮음패로 만든다.\r\n반증되었으며 거짓이라면, 사용하지 않고 버림패로 만든다. 반증되었으나 참이라면, 상대는 초조 데미지를 받고, 카드도 사용한다.",
+      "symbolWeapon": "옷",
+      "symbolSub": {
+        "A1": "유물"
+      }
+    },
+    {
+      "code": "NA-02",
+      "korName": {
+        "O": "사이네",
+        "A1": "사이네 【제2장】",
+        "A2": "사이네 【허무신】"
+      },
+      "engName": {
+        "O": "saine",
+        "A1": "saine",
+        "A2": "saine"
+      },
+      "jpnName": {
+        "O": "サイネ",
+        "A1": "サイネ",
+        "A2": "サイネ"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "O-N-2", "A1-N-3", "O-N-4", "O-N-5", "A1-N-6", "O-N-7"],
+        "A2": ["O-N-1", "A2-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "A2-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"],
+        "A2": ["O-S-1", "O-S-2", "A2-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": ["A1-S-4-Ex1"],
+        "A2": []
+      },
+      "abilityKeyword": "팔상",
+      "abilityDescription": "당신의 오라가 1 이하라면, 몇몇 카드가 강화된다.",
+      "symbolWeapon": "장도",
+      "symbolSub": {
+        "A1": "비파",
+        "A2": "거절"
+      }
+    },
+    {
+      "code": "NA-07",
+      "korName": {
+        "O": "신라",
+        "A1": "신라 【교주】"
+      },
+      "engName": {
+        "O": "shinra",
+        "A1": "shinra"
+      },
+      "jpnName": {
+        "O": "シンラ",
+        "A1": "シンラ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "A1-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "O-S-2", "A1-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": []
+      },
+      "abilityKeyword": "계략",
+      "abilityDescription": "두 종류의 계략 중 하나를 비밀리에 준비해 둔다.\r\n계략을 실행할 때 준비된 효과를 해결하고, 다음번 계략을 다시 비밀리에 준비한다.\r\n(최초의 계략은 반드시 ⌜신산⌟으로 준비한다.)",
+      "symbolWeapon": "서책",
+      "symbolSub": {
+        "A1": "경전"
+      }
+    },
+    {
+      "code": "NA-11",
+      "korName": {
+        "O": "시스이"
+      },
+      "engName": {
+        "O": "shisui"
+      },
+      "jpnName": {
+        "O": "シスイ"
+      },
+      "season": "",
+      "mode": ["O"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": []
+      },
+      "abilityKeyword": "열상",
+      "abilityDescription": "당신의 개시 페이즈 시작에 각 영역에 놓인 당신의 열상 토큰을 원하는 순서로 데미지화한다.",
+      "symbolWeapon": "톱",
+      "symbolSub": {}
+    },
+    {
+      "code": "NA-11",
+      "korName": {
+        "O": "탈리야",
+        "A1": "탈리야 【귀환】"
+      },
+      "engName": {
+        "O": "thallya",
+        "A1": "thallya"
+      },
+      "jpnName": {
+        "O": "サリヤ",
+        "A1": "サリヤ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "A1-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": ["T-N-01", "T-N-02", "T-N-03"],
+        "A1": ["T-A1-01", "T-A1-03", "T-A1-04"]
+      },
+      "abilityKeyword": "조화",
+      "abilityDescription": "머신에 조화결정을 5개 가진다.",
+      "symbolWeapon": "기승",
+      "symbolSub": {
+        "A1": "신형"
+      }
+    },
+    {
+      "code": "NA-04",
+      "korName": {
+        "O": "토코요",
+        "A1": "토코요 【방랑예인】",
+        "A2": "토코요 【허무신】"
+      },
+      "engName": {
+        "O": "tokoyo",
+        "A1": "tokoyo",
+        "A2": "tokoyo"
+      },
+      "jpnName": {
+        "O": "トコヨ",
+        "A1": "トコヨ",
+        "A2": "トコヨ"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "O-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"],
+        "A2": ["O-N-1", "A2-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"],
+        "A2": ["O-S-1", "A2-S-2", "A2-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": [],
+        "A2": []
+      },
+      "abilityKeyword": "경지",
+      "abilityDescription": "당신의 집중력이 2라면, 몇몇 카드가 강화된다.",
+      "symbolWeapon": "부채",
+      "symbolSub": {
+        "A1": "피리",
+        "A2": "공포"
+      }
+    },
+    {
+      "code": "NA-13",
+      "korName": {
+        "O": "우츠로",
+        "A1": "우츠로 【종장】"
+      },
+      "engName": {
+        "O": "utsuro",
+        "A1": "utsuro"
+      },
+      "jpnName": {
+        "O": "ウツロ",
+        "A1": "ウツロ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["A1-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": ["A1-S-1-Ex1", "A1-S-1-Ex2", "A1-S-1-Ex3", "A1-S-1-Ex4"]
+      },
+      "abilityKeyword": "회진",
+      "abilityDescription": "더스트가 12 이상이라면, 몇몇 카드가 강화된다.",
+      "symbolWeapon": "대낫",
+      "symbolSub": {
+        "A1": "먼지"
+      }
+    },
+    {
+      "code": "NA-16",
+      "korName": {
+        "O": "야츠하",
+        "A1": "야츠하 【완전태】",
+        "AA1": "야츠하 【자아】"
+      },
+      "engName": {
+        "O": "yatsuha",
+        "A1": "yatsuha",
+        "AA1": "yatsuha"
+      },
+      "jpnName": {
+        "O": "ヤツハ",
+        "A1": "ヤツハ",
+        "AA1": "ヤツハ"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "O-N-2", "O-N-3", "O-N-4", "A1-N-5", "O-N-6", "O-N-7"],
+        "AA1": [
+          "O-N-1",
+          "A2-N-2",
+          "O-N-3",
+          "O-N-4",
+          "O-N-5",
+          "O-N-6",
+          "AA1-N-7"
+        ]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "A1-S-4"],
+        "AA1": ["O-S-1", "O-S-2", "O-S-3", "AA1-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": [
+          "A1-N-1-Ex1",
+          "A1-N-2-Ex1",
+          "A1-N-3-Ex1",
+          "A1-N-4-Ex1",
+          "A1-N-5-Ex1",
+          "A1-N-6-Ex1",
+          "A1-N-7-Ex1"
+        ],
+        "AA1": ["AA1-N-7-Ex1", "AA1-N-7-Ex2"]
+      },
+      "abilityKeyword": "거울상",
+      "abilityDescription": "당신과 상대의 오라, 플레어, 라이프 중 서로 수치가 같은 쌍의 개수가 거울수가 된다.",
+      "symbolWeapon": "거울",
+      "symbolSub": {
+        "A1": "꽃",
+        "AA1": "영혼"
+      }
+    },
+    {
+      "code": "NA-06",
+      "korName": {
+        "O": "유키히",
+        "A1": "유키히 【사교계】"
+      },
+      "engName": {
+        "O": "yukihi",
+        "A1": "yukihi"
+      },
+      "jpnName": {
+        "O": "ユキヒ",
+        "A1": "ユキヒ"
+      },
+      "season": "",
+      "mode": ["O", "A1"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["O-N-1", "A1-N-2", "O-N-3", "A1-N-4", "O-N-5", "O-N-6", "O-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": []
+      },
+      "abilityKeyword": "변모",
+      "abilityDescription": "우산을 접은 상태와 펼친 상태가 존재하며, 몇몇 카드는 상태에 따라 효과가 변한다.\r\n게임을 시작할 때 우산은 접힌 상태이다.\r\n당신의 종료 페이즈마다 1번, 우산의 개폐를 수행해 상태를 변경할 수 있다(우산 카드로 표시).",
+      "symbolWeapon": "우산/비녀",
+      "symbolSub": {
+        "A1": "사교"
+      }
+    },
+    {
+      "code": "NA-01",
+      "korName": {
+        "O": "유리나",
+        "A1": "유리나 【제1장】",
+        "A2": "유리나 【조정자】"
+      },
+      "engName": {
+        "O": "yurina",
+        "A1": "yurina",
+        "A2": "yurina"
+      },
+      "jpnName": {
+        "O": "ユリナ",
+        "A1": "ユリナ",
+        "A2": "ユリナ"
+      },
+      "season": "",
+      "mode": ["O", "A1", "A2"],
+      "normalCards": {
+        "O": ["O-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "O-N-6", "O-N-7"],
+        "A1": ["A1-N-1", "O-N-2", "O-N-3", "O-N-4", "O-N-5", "A1-N-6", "O-N-7"],
+        "A2": ["O-N-1", "O-N-2", "A2-N-3", "O-N-4", "O-N-5", "O-N-6", "A2-N-7"]
+      },
+      "specialCards": {
+        "O": ["O-S-1", "O-S-2", "O-S-3", "O-S-4"],
+        "A1": ["O-S-1", "A1-S-2", "O-S-3", "O-S-4"],
+        "A2": ["A2-S-1", "O-S-2", "O-S-3", "O-S-4"]
+      },
+      "extraCards": {
+        "O": [],
+        "A1": [],
+        "A2": []
+      },
+      "abilityKeyword": "결사",
+      "abilityDescription": "당신의 라이프가 3 이하라면, 몇몇 카드가 강화된다.",
+      "symbolWeapon": "도",
+      "symbolSub": {
+        "A1": "고도",
+        "A2": "마음"
+      }
+    }
+  ]
+}

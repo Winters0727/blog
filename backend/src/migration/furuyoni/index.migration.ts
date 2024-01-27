@@ -35,7 +35,15 @@ const migrateData = async (args: Migration) => {
 
     const { data } = migrationData;
 
-    await collection.insertMany(data);
+    const currentTime = new Date();
+
+    await collection.insertMany(
+      data.map((datum: Object) => ({
+        ...datum,
+        created_at: currentTime,
+        updated_at: currentTime,
+      }))
+    );
 
     console.log("Data migration is complete.");
   }
