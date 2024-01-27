@@ -1,6 +1,6 @@
 import express from "express";
 
-import { login, logout } from "../services/admin.ts";
+import { login, logout } from "../services/admin.service.ts";
 
 const router = express.Router();
 
