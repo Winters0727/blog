@@ -1,19 +1,35 @@
 import { getCollection } from "../../../database.ts";
 
 import CharacterData from "./character.json" assert { type: "json" };
+import CardData from "./card.json" assert { type: "json" };
+import FaqData from "./faq.json" assert { type: "json" };
 import KeywordData from "./keyword.json" assert { type: "json" };
 
 interface Migration {
-  migrationData: { data: any };
+  migrationData?: { data: any };
   dbName: string;
   collectionName: string;
 }
 
 const MIGRATION_DATA: Migration[] = [
   {
+    dbName: "furuyoni",
+    collectionName: "index",
+  },
+  {
     migrationData: CharacterData,
     dbName: "furuyoni",
     collectionName: "character",
+  },
+  {
+    migrationData: CardData,
+    dbName: "furuyoni",
+    collectionName: "card",
+  },
+  {
+    migrationData: FaqData,
+    dbName: "furuyoni",
+    collectionName: "faq",
   },
   {
     migrationData: KeywordData,
@@ -29,7 +45,7 @@ const migrateData = async (args: Migration) => {
 
   const testData = await collection.findOne();
 
-  if (!testData) {
+  if (!testData && migrationData) {
     console.log(`${collectionName} data is empty.`);
     console.log("Migrating data...");
 
@@ -37,13 +53,19 @@ const migrateData = async (args: Migration) => {
 
     const currentTime = new Date();
 
-    await collection.insertMany(
-      data.map((datum: Object) => ({
-        ...datum,
-        created_at: currentTime,
-        updated_at: currentTime,
-      }))
-    );
+    try {
+      await collection.insertMany(
+        data.map((datum: Object) => ({
+          ...datum,
+          createdAt: currentTime,
+          updatedAt: currentTime,
+        }))
+      );
+    } catch (err: any) {
+      console.log(err);
+      const myError = err.writeErrors[0].err;
+      console.log(myError.errInfo.details.schemaRulesNotSatisfied);
+    }
 
     console.log("Data migration is complete.");
   }
