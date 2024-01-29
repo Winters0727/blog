@@ -3,9 +3,10 @@ import session from "express-session";
 import bodyParser from "body-parser";
 
 import "./env.ts";
-import { initializeDatabase } from "./database.ts";
+import { initializeConnection } from "./database.ts";
 
 import AdminRouter from "./src/routes/admin.ts";
+import ApiRouter from "./src/routes/api.ts";
 import ArticleRouter from "./src/routes/article.ts";
 import CommentRouter from "./src/routes/comment.ts";
 
@@ -27,6 +28,7 @@ app.use(
 app.use(bodyParser.json());
 
 app.use("/admin", AdminRouter);
+app.use("/api", ApiRouter);
 app.use("/article", ArticleRouter);
 app.use("/comment", CommentRouter);
 
@@ -34,7 +36,7 @@ app.listen(
   process.env.PORT ? parseInt(process.env.PORT) : 3000,
   "0.0.0.0",
   () => {
-    initializeDatabase();
+    initializeConnection();
     console.log("App is running...");
   }
 );
