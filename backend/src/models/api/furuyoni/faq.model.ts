@@ -15,11 +15,11 @@ const faqSchema: ModelSchema = {
       bsonType: "string",
       description: "FAQ 답변",
     },
-    created_at: {
+    createdAt: {
       bsonType: "date",
       description: "데이터 생성 날짜",
     },
-    updated_at: {
+    updatedAt: {
       bsonType: "date",
       description: "데이터 수정 날짜",
     },
