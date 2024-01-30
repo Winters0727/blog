@@ -2866,6 +2866,917 @@
       "relatedExtraCards": [],
       "revisionCount": 0,
       "cost": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-1",
+      "code": "O-N-1",
+      "charName": "thallya",
+      "korData": {
+        "name": "Burning Steam",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 기동을 수행한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "3-5",
+      "shieldDamage": "2",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-2",
+      "code": "O-N-2",
+      "charName": "thallya",
+      "korData": {
+        "name": "Waving Edge",
+        "type": "공격",
+        "subType": [],
+        "description": "연소\r\n【공격후】 기동을 수행한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-3",
+      "shieldDamage": "3",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-3",
+      "code": "O-N-3",
+      "charName": "thallya",
+      "korData": {
+        "name": "Shield Charge",
+        "type": "공격",
+        "subType": [],
+        "description": "연소\r\n【상시】 이 《공격》의 데미지로 이동하는 벚꽃결정은 더스트나 플레어가 아니라 간격으로 이동시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1",
+      "shieldDamage": "3",
+      "hpDamage": "2"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-4",
+      "code": "O-N-4",
+      "charName": "thallya",
+      "korData": {
+        "name": "Steam Cannon",
+        "type": "공격",
+        "subType": [],
+        "description": "연소\r\n전력화: 【상시】 이 《공격》은 거리확대(근1)과 거리확대(원1)을 얻고, +2/+2 된다.\r\n【공격후】 전력화하지 않았다면, 당신의 연소된 조화결정을 2개 회복한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "distance": "3-7",
+      "shieldDamage": "1",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-5",
+      "code": "O-N-5",
+      "charName": "thallya",
+      "korData": {
+        "name": "Stunt",
+        "type": "행동",
+        "subType": [],
+        "description": "상대를 위축시킨다.\r\n자신 오라 → 자신 플레어 (2)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-6",
+      "code": "O-N-6",
+      "charName": "thallya",
+      "korData": {
+        "name": "Roaring",
+        "type": "행동",
+        "subType": [],
+        "description": "비용으로 당신의 머신에 있는 조화결정을 2개 연소시켜도 된다. 그렇게 한 경우, 당신은 집중력을 1 얻고, 상대는 집중력을 1 잃고, 상대를 위축시킨다.\r\n비용으로 집중력을 2 지불해도 된다. 그렇게 한 경우, 당신의 연소된 조화결정을 3개 회복한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-O-N-7",
+      "code": "O-N-7",
+      "charName": "thallya",
+      "korData": {
+        "name": "Turbo Switch",
+        "type": "행동",
+        "subType": ["대응"],
+        "description": "연소\r\n기동을 수행한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-O-S-1",
+      "code": "O-S-1",
+      "charName": "thallya",
+      "korData": {
+        "name": "Alpha-Edge",
+        "type": "공격",
+        "subType": [],
+        "description": "즉재기: 당신이 기동을 수행해 간격을 변화시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1, 3, 5, 7",
+      "shieldDamage": "1",
+      "hpDamage": "1",
+      "cost": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-S-2",
+      "code": "O-S-2",
+      "charName": "thallya",
+      "korData": {
+        "name": "Omega-Burst",
+        "type": "행동",
+        "subType": ["대응"],
+        "description": "당신의 연소된 조화결정을 모두 회복한다.\r\n대응한 오라 데미지가 「-」 또는 X 이하인 《공격》을 무효화한다. X는 이 카드로 회복한 조화결정의 수와 같다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "4"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-S-3",
+      "code": "O-S-3",
+      "charName": "thallya",
+      "korData": {
+        "name": "Thallya's Masterpiece",
+        "type": "행동",
+        "subType": [],
+        "description": "【사용됨】 당신의 턴에, 당신이 기본동작 이외의 다른 방법으로 기동을 수행해 간격을 변화시킬 때마다,\r\n더스트 ↔ 간격 (1) 을 수행해도 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "cost": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-S-4",
+      "code": "O-S-4",
+      "charName": "thallya",
+      "korData": {
+        "name": "Julia's BlackBox",
+        "type": "행동",
+        "subType": ["전력"],
+        "description": "당신의 머신에 조화결정이 없다면, 당신의 머신은 TransForm하고, 당신의 연소된 조화결정을 2개 회복한다. 그렇지 않은 경우, 이 카드를 미사용 상태로 되돌린다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-11-thallya-O-TF-1",
+      "code": "O-TF-1",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: YAKSHA",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 상대는 다음번 개시 페이즈에 카드를 1장밖에 뽑을 수 없다. 상대를 위축시킨다.\r\n상시: 당신의 머신에 조화결정이 없다면, 당신은 기본동작을 수행할 수 없다.\r\n추가기본동작[Beta-Edge]: 공격 『적정거리 2,4,6,8, 2/1, 【공격후】 기동을 수행한다.』을 수행한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1
+    },
+    {
+      "fullCode": "NA-11-thallya-O-TF-2",
+      "code": "O-TF-2",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: NAGA",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 상대의 플레어가 3 이상이라면, 상대의 플레어가 2가 되도록 벚꽃결정을 더스트로 이동시킨다.\r\n추가기본동작[Gamma-Ray]: 상대의 패산 위에서 1장을 덮음패로 보낸다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-O-TF-3",
+      "code": "O-TF-3",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: GARUDA",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 카드를 2장 뽑는다. 이번 턴 동안, 손패의 상한이 없어진다.\r\n추가기본동작[Delta-Wing]: 현재 간격이 7 이하라면,\r\n더스트 → 간격 (1)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-N-5",
+      "code": "A1-N-5",
+      "charName": "thallya",
+      "korData": {
+        "name": "Quick Change",
+        "type": "부여",
+        "subType": [],
+        "description": "【전개시】 당신의 연소된 조화결정을 1개 회복한다. 그 후, 추가패에 있는 TransForm 카드를 1장 선택하고, 이 카드 아래에 봉인한다.\r\n【전개중】 이 카드에 봉인된 카드의 추가기본동작, 상시 효과를 유효화한다.\r\n【파기시】 이 카드에 봉인된 카드를 추가패로 되돌린다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "3"
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-S-1",
+      "code": "A1-S-1",
+      "charName": "thallya",
+      "korData": {
+        "name": "BlackBox NEO",
+        "type": "행동",
+        "subType": [],
+        "description": "종단\r\n당신의 연소된 조화결정을 1개 회복한다. 그 후, 당신에게 연소된 조화결정이 없다면, 더스트에서 벚꽃결정을 1개 가져와 이 카드 위에 놓는다. 벚꽃결정이 2개가 되었다면, 이 카드 위에 놓인 벚꽃결정을 모두 더스트로 보내고 당신의 머신은 TransForm한다.\r\n재기: 당신의 머신에 있는 조화결정이 3개 이하이다. 또는 이번 턴에 당신의 머신이 TransForm했다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "1"
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-S-2",
+      "code": "A1-S-2",
+      "charName": "thallya",
+      "korData": {
+        "name": "OMNIS-Blaster",
+        "type": "공격",
+        "subType": [],
+        "description": "【상시】 X는 이번 게임 도중 당신의 머신이 TransForm한 횟수와 같다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "3-10",
+      "shieldDamage": "X",
+      "hpDamage": "X",
+      "cost": "X"
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-TF-1",
+      "code": "A1-TF-1",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: KINNARI",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 상대는 패산을 모두 덮음패로 만든다.\r\n상시[Zeta-Voice]: 상대가 패산을 재구성했을 때, 그것을 해결한 후에 공격 『적정거리 2,4,6, 2/2』을 수행해도 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-TF-3",
+      "code": "A1-TF-3",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: ASURA",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 상대는 덮음패에서 1장을 선택하고, 그 카드를 버림패로 만든다. 이것을 1번 더 반복한다.\r\n추가기본동작[Sigma-Drive]: 공격 『적정거리 3,5, 3/2, 【공격후】 당신은 위축된다.』을 수행한다. 이 기본동작은 한 턴에 1번만 수행할 수 있다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1
+    },
+    {
+      "fullCode": "NA-11-thallya-A1-TF-4",
+      "code": "A1-TF-4",
+      "charName": "thallya",
+      "korData": {
+        "name": "Form: DEVA",
+        "type": "일반",
+        "subType": [],
+        "description": "변형시: 당신의 연소된 조화결정을 2개 회복하고, 기본동작 《휘감기》를 2번 수행한다.\r\n상시[Phy-Cycle]: 상대의 버림패에 있는 카드 수가 0이 아닌 2의 배수가 될 떄마다, 당신은 집중력을 1 얻는다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-1",
+      "code": "O-N-1",
+      "charName": "raira",
+      "korData": {
+        "name": "짐승의 손톱",
+        "type": "공격",
+        "subType": [],
+        "description": ""
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "distance": "1-2",
+      "shieldDamage": "3",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-2",
+      "code": "O-N-2",
+      "charName": "raira",
+      "korData": {
+        "name": "풍뢰격",
+        "type": "공격",
+        "subType": [],
+        "description": "【상시】 X는 풍신 게이지와 뇌신 게이지 중 더 작은 쪽의 수치와 같다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-2",
+      "shieldDamage": "X",
+      "hpDamage": "2"
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-3",
+      "code": "O-N-3",
+      "charName": "raira",
+      "korData": {
+        "name": "윤회의 손톱",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 당신의 버림패에 있는 《공격》 카드를 1장 선택하고, 패산 위에 놓아도 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-2",
+      "shieldDamage": "2",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-4",
+      "code": "O-N-4",
+      "charName": "raira",
+      "korData": {
+        "name": "바람 달리기",
+        "type": "행동",
+        "subType": [],
+        "description": "현재 간격이 3 이상이라면,\r\n간격 → 더스트 (2)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-5",
+      "code": "O-N-5",
+      "charName": "raira",
+      "korData": {
+        "name": "풍뢰의 지혜",
+        "type": "행동",
+        "subType": [],
+        "description": "풍신 게이지와 뇌신 게이지의 합계가 4 이상이라면, 당신의 버림패에 있는 다른 여신의 카드 1장을 선택하고, 패산 위에 놓아도 된다.\r\n풍신 게이지 또는 뇌신 게이지를 1 올린다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-6",
+      "code": "O-N-6",
+      "charName": "raira",
+      "korData": {
+        "name": "울부짖기",
+        "type": "행동",
+        "subType": ["전력"],
+        "description": "상대를 위축시키고 아래에서 1가지를 선택한다.\r\n· 풍신 게이지와 뇌신 게이지를 1씩 올린다.\r\n· 손패를 모두 덮음패로 만들고, 뇌신 게이지를 2배로 만든다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-12-raira-O-N-7",
+      "code": "O-N-7",
+      "charName": "raira",
+      "korData": {
+        "name": "하늘 박차기",
+        "type": "행동",
+        "subType": ["전력"],
+        "description": "간격 ↔ 더스트 (3)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-1",
+      "code": "O-S-1",
+      "charName": "raira",
+      "korData": {
+        "name": "뇌라풍신조",
+        "type": "공격",
+        "subType": [],
+        "description": "【상시】 당신의 뇌신 게이지가 4 이상이라면, 이 《공격》은 +1/+0 된다.\r\n재기: 당신의 풍신 게이지가 4 이상이다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-2",
+      "shieldDamage": "2",
+      "hpDamage": "2",
+      "cost": "3"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-2",
+      "code": "O-S-2",
+      "charName": "raira",
+      "korData": {
+        "name": "천뢰소환진",
+        "type": "행동",
+        "subType": ["전력"],
+        "description": "공격 『적정거리 0-10, 1/1』을 X번 수행한다. X는 뇌신 게이지의 절반(올림)과 같다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "6"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-3",
+      "code": "O-S-3",
+      "charName": "raira",
+      "korData": {
+        "name": "풍마초래공",
+        "type": "행동",
+        "subType": [],
+        "description": "현재 풍신 게이지에 따라, 아래 비장패를 추가패에서 미사용 상태로 얻는다. 그 후, 이 카드를 게임에서 제외한다.\r\n3 이상: 풍마선풍\r\n7 이상: 풍마전회\r\n12 이상: 풍마천구도"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-4",
+      "code": "O-S-4",
+      "charName": "raira",
+      "korData": {
+        "name": "원환륜회선",
+        "type": "부여",
+        "subType": [],
+        "description": "【전개중】 상대의 《공격》을 해결한 후에 아래를 모두 수행해도 된다.\r\n· 간격 ↔ 더스트 (1)\r\n· 풍신 게이지 또는 뇌신 게이지를 1 올린다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "deployCount": "3",
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-3-Ex1",
+      "code": "O-S-3-Ex1",
+      "charName": "raira",
+      "korData": {
+        "name": "풍마선풍",
+        "type": "공격",
+        "subType": [],
+        "description": ""
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-3",
+      "shieldDamage": "1",
+      "hpDamage": "2",
+      "cost": "1"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-3-Ex2",
+      "code": "O-S-3-Ex2",
+      "charName": "raira",
+      "korData": {
+        "name": "풍마전회",
+        "type": "행동",
+        "subType": [],
+        "description": "당신의 사용된 상태인 비장패를 1장 선택하고, 그 카드를 미사용 상태로 되돌린다.\r\n【사용됨】 당신의 비장패의 소모값은 1 감소한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "1"
+    },
+    {
+      "fullCode": "NA-12-raira-O-S-3-Ex3",
+      "code": "O-S-3-Ex3",
+      "charName": "raira",
+      "korData": {
+        "name": "풍마천구도",
+        "type": "행동",
+        "subType": ["대응"],
+        "description": "간격 ↔ 더스트 (5)\r\n당신은 이 효과로 벚꽃결정을 원래보다 더 적게 이동시켜도 된다.\r\n그 후, 이 카드를 게임에서 제외한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "4"
+    },
+    {
+      "fullCode": "NA-12-raira-A1-N-2",
+      "code": "A1-N-2",
+      "charName": "raira",
+      "korData": {
+        "name": "폭풍",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 폭풍의 힘을 1번 수행해도 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "distance": "2-3",
+      "shieldDamage": "2",
+      "hpDamage": "1"
+    },
+    {
+      "fullCode": "NA-12-raira-A1-N-6",
+      "code": "A1-N-6",
+      "charName": "raira",
+      "korData": {
+        "name": "대폭풍우",
+        "type": "부여",
+        "subType": ["전력"],
+        "description": "【전개시】 아래에서 3번 선택한다. 같은 것을 여러 번 선택해도 된다.\r\n· 풍신 게이지 또는 뇌신 게이지를 1 올린다.\r\n· 더스트에서 벚꽃결정을 1개 가져와 이 카드 위에 놓는다.\r\n【전개중】 당신과 상대의 종료 페이즈에 공격 『적정거리 0-4, 1/1, 대응불가』을 수행한다.\r\n【전개중】 매 턴마다 상대가 처음으로 수행하는 《공격》은 +0/-1 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "0"
+    },
+    {
+      "fullCode": "NA-12-raira-A1-S-3",
+      "code": "A1-S-3",
+      "charName": "raira",
+      "korData": {
+        "name": "진풍제천의",
+        "type": "행동",
+        "subType": [],
+        "description": "풍신 게이지와 뇌신 게이지를 1씩 올리고, 상대를 위축시킨다.\r\n【사용됨】 당신이 사용한 카드는 대전되지 않는다.\r\n【사용됨】 당신의 메인 페이즈 시작에 당신이 표준행동을 선택했다면, 폭풍의 힘을 2번까지 사용해도 된다. 단, 같은 힘을 여러 번 선택할 수 없다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-12-raira-A1-ST",
+      "code": "A1-ST",
+      "charName": "raira",
+      "korData": {
+        "name": "폭풍의 힘",
+        "type": "일반",
+        "subType": [],
+        "description": "풍 1: 간격 ↔ 더스트 (1)\r\n풍 2: 카드를 1장 뽑고, 손패를 1장 덮음패로 만든다.\r\n풍 3: 당신은 집중력을 1 얻고, 상대는 집중력을 1 잃는다.\r\n뇌 1: 이번 턴에 당신이 수행하는 다음번 《공격》은 +1/+0이 된다.\r\n뇌 2: 공격 『적정거리 0-4, 1/1』을 수행한다.\r\n뇌 3: 이번 턴에 당신이 수행하는 오라 데미지가 「-」가 아닌 다음번 《공격》은 +0/+1이 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-1",
+      "code": "O-N-1",
+      "charName": "utsuro",
+      "korData": {
+        "name": "원월",
+        "type": "공격",
+        "subType": [],
+        "description": "【상시】 회진 - 더스트가 12 이상이라면, 이 《공격》은 거리확대(근1)을 얻고, 오라 데미지가 「-」이 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 1,
+      "distance": "5-7",
+      "shieldDamage": "2",
+      "hpDamage": "2"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-2",
+      "code": "O-N-2",
+      "charName": "utsuro",
+      "korData": {
+        "name": "검은 파동",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 상대가 오라 데미지를 선택했다면, 상대의 손패를 보고, 그 중 1장을 선택해, 그 카드를 버림패로 만든다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "4-7",
+      "shieldDamage": "1",
+      "hpDamage": "2"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-3",
+      "code": "O-N-3",
+      "charName": "utsuro",
+      "korData": {
+        "name": "수확",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 상대는 상대의 오라, 플레어, 라이프 중에서 벚꽃결정을 합계 2개 선택해 더스트로 이동시킨다.\r\n【공격후】 상대의 부여패를 1장 선택해도 된다. 그렇게 한 경우, 선택한 부여패 위에 놓인 벚꽃결정을 2개 더스트로 보낸다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "1-3",
+      "shieldDamage": "-",
+      "hpDamage": "0"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-4",
+      "code": "O-N-4",
+      "charName": "utsuro",
+      "korData": {
+        "name": "중압",
+        "type": "행동",
+        "subType": [],
+        "description": "상대는 상대의 오라, 플레어, 라이프 중에서 벚꽃결정을 1개 더스트로 이동시킨다.\r\n회진 - 더스트가 12 이상이라면, 상대를 위축시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-5",
+      "code": "O-N-5",
+      "charName": "utsuro",
+      "korData": {
+        "name": "그림자 날개",
+        "type": "행동",
+        "subType": [],
+        "description": "이번 턴 동안, 현재 간격이 2 증가하고, 달인의 간격이 2 증가한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-6",
+      "code": "O-N-6",
+      "charName": "utsuro",
+      "korData": {
+        "name": "그림자 벽",
+        "type": "행동",
+        "subType": ["대응"],
+        "description": "대응한 《공격》은 +0/-1 된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-N-7",
+      "code": "O-N-7",
+      "charName": "utsuro",
+      "korData": {
+        "name": "윤회주",
+        "type": "부여",
+        "subType": ["전력"],
+        "description": "【전개시】 상대 오라 → 더스트 (3)\r\n【파기시】 회진 - 더스트가 12 이상이라면 아래를 수행한다.\r\n더스트 → 상대 오라 (2), 상대 라이프 → 더스트 (1)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "2"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-S-1",
+      "code": "O-S-1",
+      "charName": "utsuro",
+      "korData": {
+        "name": "회멸",
+        "type": "행동",
+        "subType": [],
+        "description": "【상시】 이 카드의 소모값은 더스트 수만큼 감소한다.\r\n상대 라이프 → 더스트 (3)\r\n이 카드를 게임에서 제외한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "24"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-S-2",
+      "code": "O-S-2",
+      "charName": "utsuro",
+      "korData": {
+        "name": "허위",
+        "type": "부여",
+        "subType": ["대응"],
+        "description": "【전개중】 상대의 《공격》은 거리축소(근1)을 얻고, 【공격후】 효과가 해결되지 않는다.\r\n【전개중】 상대의 《부여》 카드는 봉납이 1 감소하고, 【파기시】 효과가 해결되지 않는다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "3",
+      "cost": "3"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-S-3",
+      "code": "O-S-3",
+      "charName": "utsuro",
+      "korData": {
+        "name": "종말",
+        "type": "부여",
+        "subType": [],
+        "description": "【전개중】 당신에게 데미지를 1 이상 준 《공격》을 해결한 후에, 이 카드 위에 놓인 벚꽃결정을 모두 더스트로 보낸다.\r\n【파기시】 현재 페이즈를 종료한다.\r\n재기: 회진 - 더스트가 12 이상이다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "3",
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-13-utsuro-O-S-4",
+      "code": "O-S-4",
+      "charName": "utsuro",
+      "korData": {
+        "name": "마식",
+        "type": "행동",
+        "subType": [],
+        "description": "【사용됨】 당신의 개시 페이즈 시작에 상대는 아래에서 한쪽을 선택한다.\r\n· 상대 오라 → 더스트 (1)\r\n· 상대 플레어 → 더스트 (2)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "4"
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-N-2",
+      "code": "A1-N-2",
+      "charName": "utsuro",
+      "korData": {
+        "name": "좀먹는 먼지",
+        "type": "공격",
+        "subType": [],
+        "description": "【공격후】 상대가 라이프 데미지를 선택했다면,\r\n상대 플레어 → 더스트 (2)"
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "3-6",
+      "shieldDamage": "2",
+      "hpDamage": "0"
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-S-1",
+      "code": "A1-S-1",
+      "charName": "utsuro",
+      "korData": {
+        "name": "잔향장치: 쿠루루식",
+        "type": "공격",
+        "subType": [],
+        "description": "종단\r\n【사용됨】 당신 또는 상대의 종료 페이즈에 더스트가 13 이상이라면, 종언의 그림자가 되살아난다. 그 후, 이 카드를 게임에서 제외하고, 당신의 추가패에서 「망아」를 사용된 상태로 얻고, 카드를 1장 뽑고, 당신의 라이프가 6 이상이라면, 당신의 라이프가 5가 되도록 벚꽃결정을 더스트로 이동시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [
+        "NA-13-utsuro-A1-S-1-Ex1",
+        "NA-13-utsuro-A1-S-1-Ex2",
+        "NA-13-utsuro-A1-S-1-Ex3",
+        "NA-13-utsuro-A1-S-1-Ex4"
+      ],
+      "revisionCount": 1,
+      "distance": "3-10",
+      "shieldDamage": "2",
+      "hpDamage": "1",
+      "cost": "2"
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-S-1-Ex1",
+      "code": "A1-S-1-Ex1",
+      "charName": "utsuro",
+      "korData": {
+        "name": "망아",
+        "type": "행동",
+        "subType": [],
+        "description": "【사용됨】 당신은 데미지를 받지 않는다.\r\n즉재기: 당신의 메인 페이즈가 시작된다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "cost": "6"
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-S-1-Ex2",
+      "code": "A1-S-1-Ex2",
+      "charName": "utsuro",
+      "korData": {
+        "name": "망상을 일그러뜨리는 섬멸의 그림자",
+        "type": "공격",
+        "subType": ["전력"],
+        "description": "대응불가\r\n【공격후】 상대는 상대의 오라, 플레어, 라이프 중에서 벚꽃결정을 합계 6개를 더스트로 이동시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "distance": "0-3",
+      "shieldDamage": "-",
+      "hpDamage": "0"
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-S-1-Ex3",
+      "code": "A1-S-1-Ex3",
+      "charName": "utsuro",
+      "korData": {
+        "name": "스스로를 잊고 정적을 거닐다",
+        "type": "행동",
+        "subType": ["전력"],
+        "description": "당신은 《전진》 이외의 기본동작을 5번까지 수행해도 된다.\r\n공격 『적정거리 4-10, 3/2』을 수행한다.\r\n공격 『적정거리 5-10, 1/1』을 수행한다.\r\n공격 『적정거리 6-10, 1/1』을 수행한다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0
+    },
+    {
+      "fullCode": "NA-13-utsuro-A1-S-1-Ex4",
+      "code": "A1-S-1-Ex4",
+      "charName": "utsuro",
+      "korData": {
+        "name": "종언이여, 오라",
+        "type": "부여",
+        "subType": [],
+        "description": "【파기시】 상대는 손패와 패산을 모두 버림패로 만든다. 상대의 집중력은 0이 된다. 상대를 위축시킨다."
+      },
+      "engData": {},
+      "jpnData": {},
+      "relatedExtraCards": [],
+      "revisionCount": 0,
+      "deployCount": "2"
     }
   ]
 }
